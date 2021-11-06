@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121212"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Alarm Set"
-        android:textSize="30sp"
         android:layout_above="@+id/button_time_picker"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="31dp"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="293dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="293dp"
+        android:width="200dp"
+        android:fontFamily="@font/roboto_bold"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:typeface="sans" />
+
     <Button
         android:id="@+id/button_time_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open Time Picker"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        android:width="156dp"
+        android:height="56dp"
+        android:backgroundTint="#D15454"
+        android:fontFamily="@font/roboto_bold"
+        android:text="ADD ALARM"
+        android:textSize="16sp"
+        app:cornerRadius="50dp" />
+
     <Button
         android:id="@+id/button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel Alarm"
-        android:layout_below="@id/button_time_picker"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:width="156dp"
+        android:height="56dp"
+        android:backgroundTint="#373D3F"
+        android:text="Cancel"
+        app:cornerRadius="50dp" />
 </RelativeLayout>

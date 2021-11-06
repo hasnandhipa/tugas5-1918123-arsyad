@@ -1,4 +1,4 @@
-package com.example.pertemuan5_alarmmanager;
+package com.example.tugas5_alarmmanager;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;

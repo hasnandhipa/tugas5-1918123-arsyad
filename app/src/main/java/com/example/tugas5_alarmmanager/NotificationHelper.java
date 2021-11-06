@@ -1,4 +1,4 @@
-package com.example.pertemuan5_alarmmanager;
+package com.example.tugas5_alarmmanager;
 
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
@@ -43,8 +43,8 @@ public class NotificationHelper extends ContextWrapper {
     public NotificationCompat.Builder getChannelNotification() {
         return new
                 NotificationCompat.Builder(getApplicationContext(), channelID)
-                .setContentTitle("Alarm Manager")
-                .setContentText("Alarm is ringing.")
+                .setContentTitle("Best Alarm App in Da Wrld")
+                .setContentText("Alarm is ringing!")
                 .setSmallIcon(R.drawable.ic_alarm);
     }
 }

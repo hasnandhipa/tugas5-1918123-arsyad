@@ -1,4 +1,4 @@
-package com.example.pertemuan5_alarmmanager;
+package com.example.tugas5_alarmmanager;
 
 import org.junit.Test;
 

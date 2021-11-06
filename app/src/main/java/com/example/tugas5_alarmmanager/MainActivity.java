@@ -1,4 +1,4 @@
-package com.example.pertemuan5_alarmmanager;
+package com.example.tugas5_alarmmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -57,9 +58,10 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
     }
     //mengganti text view
     private void updateTimeText(Calendar c){
-        String timeText = "Alarm set for: ";
-        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
+        //String timeText = "Alarm set for: ";
+        String timeText = DateFormat.getTimeInstance(DateFormat.MEDIUM).format(c.getTime());
         mTextView.setText(timeText);
+        Toast.makeText(getApplicationContext(),"An Alarm has been set successfully", Toast. LENGTH_SHORT).show();
     }
     //memulai alarm
     private void startAlarm(Calendar c){
@@ -70,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         if(c.before(Calendar.getInstance())){
             c.add(Calendar.DATE,1);
         }
-
         alarmManager.setExact(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(), pendingIntent);
     }
     //menggagalkan alarm
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         PendingIntent pendingIntent =
                 PendingIntent.getBroadcast(this,1,intent,0);
         alarmManager.cancel(pendingIntent);
-        mTextView.setText("Alarm Canceled");
+        mTextView.setText(" ");
+        Toast. makeText(getApplicationContext(),"An Alarm has been cancelled",Toast. LENGTH_SHORT).show();
     }
 }
